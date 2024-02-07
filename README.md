@@ -1,30 +1,38 @@
-PURPOSE
+# Purpose
 The purpose of Project 3 was to write my own compression program called zap.
 The program will be used specifically for compressing and decompressing text
 files using the Huffman coding algorithm.
 
-FILES
+# Files
 HuffmanCoder.h: interface of HuffmanCoder class
+
 HuffmanCoder.cpp: implementation of HuffmanCoder class
+
 unit_tests.h: unit tests used to test HuffmanCoder member functions
-main.cpp: calls encoder or decoder on given input and output files, depending
-    on whether "zap" or "unzap" is given as one of the command line arguments
+
+main.cpp: calls encoder or decoder on given input and output files, depending on whether "zap" or "unzap" is given as one of the command line arguments
+
 README: explains program design and discusses specifics
+
 Makefile: defines rules to create executable
-huffman_wiki.txt: the Wikipedia definition of Huffman coding - used as a new
-    input text file to test and pass to ./zap zap
+
+huffman_wiki.txt: the Wikipedia definition of Huffman coding - used as a new input text file to test and pass to ./zap zap
+
 my_wiki.zap: zapped (encoded) file of huffman_wiki.txt
+
 my_new_wiki.txt: unzapped (decoded) file of my_wiki.zap
-pride_and_prejudice.txt: the entire text of Pride and Prejudice used as a new
-    input text file to test and pass to ./zap zap
+
+pride_and_prejudice.txt: the entire text of Pride and Prejudice used as a new input text file to test and pass to ./zap zap
+
 my_pride.zap: zapped (encoded) file of pride_and_prejudice.txt
+
 my_new_pride.txt: unzapped (decoded) file of my_pride.zap
 
-INSTRUCTIONS
-The make command compiles my program and "./zap [zap | unzap] inputFile
-outputFile" runs it.
+# Compile/Run
+        make zap
+        ./zap [zap | unzap] inputFile outputFile
 
-OUTLINE
+# Outline
 A min-heap priority queue of HuffmanTreeNode pointers was used to build the
 Huffman code tree. The queue was represented under the hood using a vector.
 A min-heap priority queue can be used to construct a Huffman code tree because
@@ -45,7 +53,7 @@ encode_text function. My program relied on the decode_string function as it
 was the most important part of the decoding process in producing the final
 unzapped file (the original text).
 
-TESTING
+# Testing
 I tested all member functions of the HuffmanCoder class (except for encoder, 
 decoder, and the helper functions) using the unit testing framework. I
 temporarily made all of the member functions public when I was testing in
