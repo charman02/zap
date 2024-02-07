@@ -11,6 +11,14 @@ main.cpp: calls encoder or decoder on given input and output files, depending
     on whether "zap" or "unzap" is given as one of the command line arguments
 README: explains program design and discusses specifics
 Makefile: defines rules to create executable
+huffman_wiki.txt: the Wikipedia definition of Huffman coding - used as a new
+    input text file to test and pass to ./zap zap
+my_wiki.zap: zapped (encoded) file of huffman_wiki.txt
+my_new_wiki.txt: unzapped (decoded) file of my_wiki.zap
+pride_and_prejudice.txt: the entire text of Pride and Prejudice used as a new
+    input text file to test and pass to ./zap zap
+my_pride.zap: zapped (encoded) file of pride_and_prejudice.txt
+my_new_pride.txt: unzapped (decoded) file of my_pride.zap
 
 INSTRUCTIONS
 The make command compiles my program and "./zap [zap | unzap] inputFile
